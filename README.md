@@ -64,8 +64,8 @@ After installation with setup.sh, setup.py or from pip, the following console co
 
 **Metrics:**
 
-* `evo_ape` - absolute pose error
-* `evo_rpe` - relative pose error（ATE）
+* `evo_ape` - absolute pose error（ATE）
+* `evo_rpe` - relative pose error
 * `evo_rpe-for-each` - sub-sequence-wise averaged relative pose error
 
 **Tools:**
