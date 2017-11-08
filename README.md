@@ -152,6 +152,39 @@ There are some example trajectories in the source folder in `evo/test/data`.
   </center>
 
 ---
+4.
+The following combinations are possible:
+
+
+
+ --save_as_bag 
+
+ --save_as_kitti 
+
+ --save_as_tum 
+
+
+ bag  yes yes yes 
+ euroc  yes yes yes 
+ kitti  no (no timestamps) yes no (no timestamps) 
+ tum  yes yes yes 
+
+Example:
+
+# export a EuRoC groundtruth file to a TUM trajectory
+evo_traj euroc data.csv --save_as_tum
+# (will be saved as data.tum)
+
+# export TUM trajectories to KITTI format
+evo_traj tum traj_1.txt traj_2.txt traj_3.txt --save_as_kitti
+# (will be saved as *.kitti)
+
+# export TUM trajectories to ROS bagfile
+evo_traj tum traj_1.txt traj_2.txt traj_3.txt --save_as_bag
+# (will be saved as <timestamp>.bag with topics traj_1, traj_2 and traj_3)
+
+# and so on...
+
 
 ## Jupyter Notebooks
 
